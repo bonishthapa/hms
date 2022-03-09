@@ -30,18 +30,30 @@
             </div>
         </div>
     </nav>
+    <div class="souter">
+        <Sidebar />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
+import Sidebar from '../components/Sidebar.vue'
 
 export default {
     name:'Navbar',
+    components:{
+        Sidebar
+    }
 }
 </script>
 
-<style>
+<style scoped>
 .navbar{
     background-color: teal !important;
     color: white !important;
+}
+.souter{
+    display: flex;
+    flex-flow: wrap;
 }
 </style>

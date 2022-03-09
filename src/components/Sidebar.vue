@@ -47,6 +47,7 @@ export default {
     width: 300px;
     height: 100vh;
     background-color: #69a5e1;
+    box-shadow: 0 5px 20px rgba(0, 0,0, 0.2);
 }
 .sidebar-item{
     padding: 50px;

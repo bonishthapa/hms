@@ -2,16 +2,21 @@
   <div class="dashboard">
       <div class="container">
           <ContentNumber :content="content"/>
+          
+          <TableData :patient="patient" />
       </div>
   </div>
 </template>
 
 <script>
 import ContentNumber from '../components/ContentNumber.vue'
+import TableData from '../components/TableData.vue'
+
 export default {
     name:'Dashboard',
     components:{
-        ContentNumber
+        ContentNumber,
+        TableData
     },
     data(){
         return{
@@ -28,6 +33,43 @@ export default {
                     name:'Nurse',
                     number:20,
                 },
+            ],
+            patient:[
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                },
+                {
+                    patient_name:"abcd",
+                    assigned_doctor:1,
+                    visit_date:"2022-03-09"
+                }
             ]
         }
     }
@@ -35,5 +77,5 @@ export default {
 </script>
 
 <style>
-
+.dashboard{}
 </style>

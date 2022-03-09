@@ -3,9 +3,17 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/navbar',
+    name: 'Navbar',
+    redirect:'/',
+    component: ()=>import('../components/Navbar.vue'),
+    children:[
+      {
+        path: '/',
+        name: 'Home',
+        component: Home,
+      },
+    ]
   },
   {
     path: '/about',
