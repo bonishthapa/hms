@@ -3,7 +3,8 @@
       <div class="sidebar-item">
           <ul>
               <li v-for="(item,index) in sidebar" :key="index">
-                  {{item.name}}
+                  <router-link :to="item.path">{{item.name}}</router-link>
+
               </li>
           </ul>
       </div>
@@ -11,34 +12,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name:'Sidebar',
-    data(){
-        return{
-            sidebar:[
-                {
-                    name:'Doctor',
-                    path:'#'
-                },
-                {
-                    name:'Doctor',
-                    path:'#'
-                },
-                {
-                    name:'Doctor',
-                    path:'#'
-                },
-                {
-                    name:'Doctor',
-                    path:'#'
-                },
-                {
-                    name:'Doctor',
-                    path:'#'
-                },
-            ]
-        }
+    computed:mapGetters(['sidebar']),
+    created(){
+        // this.sidebar()
     }
+
 }
 </script>
 
